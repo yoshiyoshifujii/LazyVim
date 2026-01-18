@@ -17,7 +17,7 @@ return {
         },
 
         -- Add servers you want enabled here. Examples:
-        -- tsserver = {},
+        tsserver = {},
         -- gopls = {},
         -- pyright = {},
       },
