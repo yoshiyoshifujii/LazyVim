@@ -134,8 +134,6 @@ end
 map("n", "cw", toggle_qf_window, { silent = true })
 
 vim.cmd([[
-  nnoremap <C-i> :help<Space>
-  nnoremap <C-i><C-i> :help <C-r><C-w><CR>
   xnoremap <silent> // y/\V<C-R>=escape(@", '\\/.*$^~[]')<CR><CR>
   xnoremap /r "xy:%s/<C-R>=escape(@x, '\\/.*$^~[]')<CR>//gc<Left><Left><Left>
 ]])
