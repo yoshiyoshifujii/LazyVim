@@ -49,9 +49,12 @@ opt.tabstop = 2
 opt.shiftwidth = 2
 opt.softtabstop = 0
 opt.expandtab = true
-opt.autochdir = true
+opt.autochdir = false
 opt.tags = "tags;"
 opt.tagbsearch = false
 opt.fileformats = { "unix", "dos", "mac" }
 opt.suffixes = ".bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc"
 opt.virtualedit:append("block")
+
+-- Disable LazyVim auto-formatting
+vim.g.autoformat = false

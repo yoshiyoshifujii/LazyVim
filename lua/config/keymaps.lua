@@ -10,6 +10,14 @@ map({ "n", "x", "o" }, ";", ":")
 -- Clipboard paste in insert mode
 map("i", "<C-p>", '<Esc>"*pa', { silent = true })
 
+-- Copy current file absolute path to clipboard
+map("n", "<leader>yp", function()
+  local path = vim.fn.expand("%:p")
+  vim.fn.setreg("+", path)
+  vim.fn.setreg("*", path)
+  print("Copied: " .. path)
+end, { desc = "Yank file path", silent = true })
+
 -- Movement
 map("n", "h", "<Left>")
 map("n", "j", "gj")

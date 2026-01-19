@@ -18,7 +18,20 @@ return {
 
         -- Add servers you want enabled here. Examples:
         tsserver = {},
-        -- gopls = {},
+
+        -- Go language server with enhanced semantic highlighting
+        gopls = {
+          settings = {
+            gopls = {
+              semanticTokens = true,
+              analyses = {
+                unusedparams = true,
+                shadow = true,
+              },
+              staticcheck = true,
+            },
+          },
+        },
         -- pyright = {},
       },
     },

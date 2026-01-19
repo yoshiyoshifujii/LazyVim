@@ -128,3 +128,13 @@ end, {})
 vim.api.nvim_create_user_command("Sjis", function()
   vim.cmd("Cp932")
 end, {})
+
+-- Disable all LazyVim format on save autocmds
+vim.api.nvim_create_autocmd("User", {
+  pattern = "LazyVimStarted",
+  callback = function()
+    -- Delete LazyVim's format autocmd groups
+    pcall(vim.api.nvim_del_augroup_by_name, "lazyvim_format_on_save")
+    pcall(vim.api.nvim_del_augroup_by_name, "lazyvim_auto_format")
+  end,
+})
