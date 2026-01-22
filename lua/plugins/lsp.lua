@@ -4,6 +4,10 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
+      -- Automatically install LSP servers
+      ensure_installed = {
+        "kotlin_language_server",
+      },
       servers = {
         -- Example: Lua language server settings
         lua_ls = {
@@ -32,6 +36,9 @@ return {
             },
           },
         },
+
+        -- Kotlin language server
+        kotlin_language_server = {},
         -- pyright = {},
       },
     },
