@@ -7,6 +7,7 @@ return {
       -- Automatically install LSP servers
       ensure_installed = {
         "kotlin_language_server",
+        "nil",
       },
       servers = {
         -- Example: Lua language server settings
@@ -39,6 +40,8 @@ return {
 
         -- Kotlin language server
         kotlin_language_server = {},
+        -- Nix language server (nil)
+        nil_ls = {},
         -- pyright = {},
       },
     },
