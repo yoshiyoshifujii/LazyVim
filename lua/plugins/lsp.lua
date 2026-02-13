@@ -8,6 +8,7 @@ return {
       ensure_installed = {
         "kotlin_language_server",
         "nil",
+        "jsonls",
       },
       servers = {
         -- Example: Lua language server settings
@@ -42,6 +43,8 @@ return {
         kotlin_language_server = {},
         -- Nix language server (nil)
         nil_ls = {},
+        -- JSON language server
+        jsonls = {},
         -- pyright = {},
       },
     },
