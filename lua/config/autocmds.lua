@@ -129,6 +129,15 @@ vim.api.nvim_create_user_command("Sjis", function()
   vim.cmd("Cp932")
 end, {})
 
+-- .env files: set filetype to dotenv to avoid shellcheck warnings
+autocmd({ "BufRead", "BufNewFile" }, {
+  group = augroup("dotenv_filetype", { clear = true }),
+  pattern = { ".env", ".env.*", "*.env" },
+  callback = function()
+    vim.bo.filetype = "dotenv"
+  end,
+})
+
 -- Disable all LazyVim format on save autocmds
 vim.api.nvim_create_autocmd("User", {
   pattern = "LazyVimStarted",
