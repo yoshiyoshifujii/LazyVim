@@ -9,6 +9,7 @@ return {
         "kotlin_language_server",
         "nil",
         "jsonls",
+        "ts_ls",
       },
       servers = {
         -- Example: Lua language server settings
@@ -22,8 +23,8 @@ return {
           },
         },
 
-        -- Add servers you want enabled here. Examples:
-        tsserver = {},
+        -- JavaScript/TypeScript language server
+        ts_ls = {},
 
         -- Go language server with enhanced semantic highlighting
         gopls = {
